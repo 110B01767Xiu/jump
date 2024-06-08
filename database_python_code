@@ -1,0 +1,23 @@
+#%% 創建資料庫
+mycursor.execute("CREATE DATABASE `test1`;")
+#%% 創建表格
+mycursor.execute('''
+        CREATE TABLE IF NOT EXISTS jump_list (
+        name VARCHAR(255) NOT NULL,
+        jump INT,
+        date VARCHAR(10)
+        )
+    ''')
+#%% 取得所有資料庫名稱並印出
+mycursor.execute("SHOW DATABASES;")
+database_all = mycursor.fetchall()
+for r in database_all:
+    print(r)
+#%% 取得表格所有資料並印出
+mycursor.execute("SELECT * FROM `students`;")
+table_data = mycursor.fetchall()
+for r in table_data:
+    print(r)
+
+mycursor.close()
+mydb.close()
