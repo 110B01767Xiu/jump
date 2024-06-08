@@ -1,0 +1,6 @@
+use `test1`; #使用該資料庫
+describe `jump_list`; #查看該表格各欄位初始設定
+show databases; #列出所有資料庫
+SELECT * FROM `jump_list`; #列出該表格所有欄位
+drop table `表格名稱`; #刪除該表格
+alter table `表格名稱` add 新增欄位名稱 decimal(3,2); #共3位數,2位數是小數
