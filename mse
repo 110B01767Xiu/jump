@@ -1,0 +1,33 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 讀取Excel檔案
+file_path = r"C:\Users\修毅\Downloads\數據.xlsx"
+df = pd.read_excel(file_path)
+
+# 檢查讀取的數據
+print(df.head())
+
+# 計算MSE
+mse = np.mean((df['實際數據'] - df['影像數據']) ** 2)
+print(f'MSE: {mse}')
+
+# 計算相關係數
+correlation = df['實際數據'].corr(df['影像數據'])
+print(f'Correlation Coefficient: {correlation}')
+
+# 繪製散點圖
+plt.figure(figsize=(12, 6))
+
+# 散點圖和相關係數
+plt.subplot(1, 2, 1)
+plt.scatter(df['實際數據'], df['影像數據'], alpha=0.5)
+plt.title(f'Scatter Plot\nCorrelation Coefficient: {correlation:.2f}')
+plt.xlabel('True Values')
+plt.ylabel('Predicted Values')
+
+
+# 顯示圖形
+plt.tight_layout()
+plt.show()
