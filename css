@@ -1,0 +1,90 @@
+* {
+    padding: 0; /*內邊距*/
+    margin: 0; /*外邊距*/
+}
+header {
+    background-color:peru;
+    height: 80px; /*高度80像素*/
+    width: 100%; /*寬度與視窗同寬*/
+    position: relative;
+}
+h1 {
+    color: white;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(image/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    text-indent: -120px;
+}
+h2 {
+    color:#640043;
+}
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+header li {
+    display: inline;
+    margin-right: 4vw; /*間隔視窗寬度4%*/
+}
+header a {
+    color: white;
+    text-decoration: none; /*去底線*/
+}
+header a:hover {
+    text-decoration: underline; /*懸停時顯示底線*/
+}
+body {
+    background-image: url('bg.jpg');
+    background-size: cover; /* 使背景图片填满视窗 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-position: center; /* 将背景图片居中 */
+    background-attachment: fixed; /* 使背景图片固定，不随页面滚动 */
+    margin: 0; /* 移除页面默认的外边距 */
+    padding: 0; /* 移除页面默认的内边距 */
+    height: 100vh; /* 设置body高度为视窗高度 */
+}
+
+.image-size {
+    height: 300px;
+    width: 300px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center;
+    height: 400px; /* 使内容垂直居中 */
+}
+.center-table {
+    border: 0 solid black;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.clock {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
